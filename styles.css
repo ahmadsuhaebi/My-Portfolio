@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. GLOBAL VARIABLES & RESET OPTIONS
+   ========================================================================== */
 :root {
   --bg: #0f172a;
   --surface: rgba(255, 255, 255, 0.08);
@@ -14,12 +17,15 @@
   --radius: 28px;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
 }
+
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   font-family:
@@ -46,6 +52,7 @@ body {
     linear-gradient(135deg, #0f172a 0%, #111827 42%, #1e1b4b 100%);
   overflow-x: hidden;
 }
+
 body:before {
   content: '';
   position: fixed;
@@ -57,20 +64,93 @@ body:before {
   pointer-events: none;
   mask-image: linear-gradient(to bottom, black, transparent 78%);
 }
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
 ul {
   padding-left: 1.2rem;
 }
+
 li {
   margin: 0.45rem 0;
 }
+
 .container {
   width: min(1140px, calc(100% - 40px));
   margin: auto;
 }
+
+/* Typography Reset */
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin: 1.2rem 0 1.4rem;
+  font-size: clamp(2.55rem, 6vw, 5.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.075em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4.5vw, 3.7rem);
+  line-height: 1.02;
+  letter-spacing: -0.06em;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.55rem;
+}
+
+h4 {
+  color: var(--blue);
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Text Justify (Rata Kanan-Kiri) */
+.hero-text,
+.about-content p,
+.project-segment-box p,
+.project-segment-box li,
+.timeline-card p,
+.timeline-card li,
+.edu-details-text,
+.contact-box p {
+  color: var(--muted);
+  text-align: justify;
+}
+
+/* Cards Layout Base Pattern */
+.profile-card,
+.skill-card,
+.project-detailed-card,
+.timeline-card,
+.education-card-item,
+.contact-box,
+.about-cards div {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.055)
+  );
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION COMPONENTS
+   ========================================================================== */
 .header {
   position: sticky;
   top: 0;
@@ -79,6 +159,7 @@ li {
   background: rgba(15, 23, 42, 0.76);
   border-bottom: 1px solid var(--line);
 }
+
 .nav {
   width: min(1180px, calc(100% - 40px));
   height: 74px;
@@ -87,12 +168,14 @@ li {
   align-items: center;
   justify-content: space-between;
 }
+
 .brand {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   font-weight: 800;
 }
+
 .brand-icon {
   display: grid;
   place-items: center;
@@ -103,6 +186,7 @@ li {
   color: #fff;
   box-shadow: 0 14px 35px rgba(56, 189, 248, 0.22);
 }
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -110,9 +194,11 @@ li {
   color: var(--muted);
   font-weight: 700;
 }
+
 .nav-links a:hover {
   color: #fff;
 }
+
 .nav-cta {
   padding: 0.7rem 1rem;
   border-radius: 999px;
@@ -120,6 +206,22 @@ li {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid var(--line);
 }
+
+.nav-cv-link {
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  color: #fff !important;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.nav-cv-link:hover {
+  background: var(--blue);
+  color: #07111f !important;
+}
+
 .menu-btn {
   display: none;
   background: var(--surface);
@@ -129,21 +231,23 @@ li {
   padding: 0.45rem 0.7rem;
   font-size: 1.25rem;
 }
-.section {
-  position: relative;
-  padding: 92px 0;
-}
+
+/* ==========================================================================
+   3. HERO SECTION & GRAPHIC CHART COMPONENTS
+   ========================================================================== */
 .hero {
   min-height: calc(100vh - 74px);
   display: grid;
   place-items: center;
 }
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1.12fr 0.88fr;
   gap: 4rem;
   align-items: center;
 }
+
 .pill {
   display: inline-flex;
   width: fit-content;
@@ -161,46 +265,19 @@ li {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
-}
-h1 {
-  margin: 1.2rem 0 1.4rem;
-  font-size: clamp(2.55rem, 6vw, 5.6rem);
-  line-height: 0.98;
-  letter-spacing: -0.075em;
-}
-h2 {
-  font-size: clamp(2rem, 4.5vw, 3.7rem);
-  line-height: 1.02;
-  letter-spacing: -0.06em;
-}
-h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.55rem;
-}
-.hero-text,
-.about-content p,
-.project-body p,
-.skill-card p,
-.timeline-card p,
-.contact-box p {
-  color: var(--muted);
-}
+
 .hero-text {
   font-size: 1.12rem;
   max-width: 720px;
 }
-.hero-actions,
-.contact-links {
+
+.hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
   margin-top: 1.8rem;
 }
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -211,26 +288,43 @@ h3 {
   font-weight: 800;
   transition: 0.25s ease;
 }
+
 .btn-primary {
   color: #07111f;
   background: linear-gradient(135deg, #67e8f9, #a78bfa, #fb7185);
   box-shadow: 0 18px 46px rgba(167, 139, 250, 0.28);
 }
+
 .btn-primary:hover,
-.btn-ghost:hover {
+.btn-ghost:hover,
+.btn-cv-hero:hover {
   transform: translateY(-3px);
 }
+
 .btn-ghost {
   color: #fff;
   background: var(--surface);
   border: 1px solid var(--line);
 }
+
+.btn-cv-hero {
+  color: #fff;
+  background: rgba(167, 139, 250, 0.15);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+}
+
+.btn-cv-hero:hover {
+  background: var(--purple);
+  color: #07111f;
+}
+
 .stats-row {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 2rem;
 }
+
 .stats-row div {
   padding: 1rem 1.15rem;
   min-width: 135px;
@@ -238,41 +332,31 @@ h3 {
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.06);
 }
+
 .stats-row strong {
   display: block;
   font-size: 1.65rem;
   color: #fff;
 }
+
 .stats-row span {
   color: var(--muted);
   font-size: 0.9rem;
 }
-.profile-card,
-.skill-card,
-.project-card,
-.timeline-card,
-.contact-box,
-.about-cards div {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.12),
-    rgba(255, 255, 255, 0.055)
-  );
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(18px);
-}
+
+/* Original Bar Chart Graphic */
 .profile-card {
   padding: 1.35rem;
   transform: rotate(2deg);
 }
+
 .profile-top {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 1.1rem;
 }
+
 .avatar {
   display: grid;
   place-items: center;
@@ -283,6 +367,7 @@ h3 {
   font-size: 1.6rem;
   font-weight: 900;
 }
+
 .chart-card {
   position: relative;
   height: 300px;
@@ -297,6 +382,7 @@ h3 {
     rgba(15, 23, 42, 0.78);
   border: 1px solid var(--line);
 }
+
 .chart-bars {
   position: absolute;
   inset: 2rem 2rem 2rem;
@@ -304,12 +390,14 @@ h3 {
   align-items: end;
   gap: 1rem;
 }
+
 .chart-bars span {
   flex: 1;
   border-radius: 14px 14px 6px 6px;
   background: linear-gradient(180deg, #67e8f9, #2563eb);
   animation: grow 1.4s ease both;
 }
+
 .chart-bars span:nth-child(2) {
   background: linear-gradient(180deg, #a78bfa, #7c3aed);
 }
@@ -322,6 +410,7 @@ h3 {
 .chart-bars span:nth-child(5) {
   background: linear-gradient(180deg, #fb7185, #e11d48);
 }
+
 .line-graph {
   position: absolute;
   left: 3rem;
@@ -330,6 +419,7 @@ h3 {
   height: 140px;
   border-bottom: 4px solid rgba(255, 255, 255, 0.05);
 }
+
 .line-graph:before {
   content: '';
   position: absolute;
@@ -342,6 +432,7 @@ h3 {
   transform: rotate(-16deg);
   transform-origin: left center;
 }
+
 .line-graph i {
   position: absolute;
   width: 15px;
@@ -350,6 +441,7 @@ h3 {
   background: #fff;
   box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.12);
 }
+
 .line-graph i:nth-child(1) {
   left: 0;
   top: 82px;
@@ -366,12 +458,14 @@ h3 {
   right: 0;
   top: -8px;
 }
+
 .mini-tags {
   display: flex;
   gap: 0.55rem;
   flex-wrap: wrap;
   margin-top: 1rem;
 }
+
 .mini-tags span {
   padding: 0.5rem 0.72rem;
   border-radius: 999px;
@@ -381,6 +475,7 @@ h3 {
   font-size: 0.85rem;
   font-weight: 700;
 }
+
 .blob {
   position: absolute;
   border-radius: 999px;
@@ -402,44 +497,61 @@ h3 {
   bottom: 9%;
   background: var(--blue);
 }
+
+/* ==========================================================================
+   4. SECTIONS & LAYOUT ARRANGEMENTS (ABOUT & SKILLS)
+   ========================================================================== */
+.section {
+  position: relative;
+  padding: 92px 0;
+}
+
+.soft-bg {
+  background: rgba(255, 255, 255, 0.035);
+}
+
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
 }
+
 .center {
   text-align: center;
   max-width: 760px;
   margin: 0 auto 2.2rem;
 }
+
 .about-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.95rem;
   margin-top: 1.4rem;
 }
+
 .about-cards div {
   padding: 1.25rem;
 }
+
 .about-cards span {
   color: var(--blue);
   font-weight: 900;
 }
-.soft-bg {
-  background: rgba(255, 255, 255, 0.035);
-}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.1rem;
   margin-top: 2.2rem;
 }
+
 .skill-card {
   padding: 1.35rem;
   transition: 0.25s ease;
 }
+
 .skill-card:hover,
-.project-card:hover {
+.project-detailed-card:hover {
   transform: translateY(-6px);
   background: linear-gradient(
     180deg,
@@ -447,6 +559,7 @@ h3 {
     rgba(255, 255, 255, 0.075)
   );
 }
+
 .icon {
   display: grid;
   place-items: center;
@@ -457,6 +570,7 @@ h3 {
   color: #07111f;
   font-weight: 900;
 }
+
 .blue {
   background: linear-gradient(135deg, #67e8f9, #38bdf8);
 }
@@ -476,81 +590,25 @@ h3 {
 .dark {
   background: linear-gradient(135deg, #cbd5e1, #64748b);
 }
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.1rem;
+
+/* ==========================================================================
+   5. DETAILED PROJECTS SECTIONS (BREAKDOWN A-E STRUCTURE)
+   ========================================================================== */
+.projects-grid-full {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
   margin-top: 2.2rem;
 }
 
-/* Modifikasi Flexbox Utama pada Card */
-.project-card {
+.project-detailed-card {
   overflow: hidden;
   transition: 0.25s ease;
-  display: flex; /* Aktifkan Flexbox di level Card */
-  flex-direction: column; /* Mengalir vertikal dari atas ke bawah */
-}
-.project-card.big {
-  grid-row: span 2;
 }
 
-/* Kunci tinggi gambar cover */
-.project-image-cover {
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-  display: block;
-  border-top-left-radius: 28px;
-  border-top-right-radius: 28px;
+.project-body-detailed {
+  padding: 2.2rem;
 }
-.project-image-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-/* Modifikasi Body Konten agar Rata Bawah */
-.project-body {
-  padding: 1.3rem;
-  flex-grow: 1; /* Memaksa kontainer teks melar mengisi sisa ruang */
-  display: flex; /* Buat flex internal baru */
-  flex-direction: column;
-  justify-content: space-between; /* Pisahkan bagian atas (teks) dan bawah (garis) */
-}
-
-/* Pembungkus teks utama */
-.project-main-content {
-  flex-grow: 1;
-}
-
-/* Pembungkus Garis + Link (Supaya posisinya mutlak sejajar paling bawah) */
-.project-footer-wrapper {
-  margin-top: auto; /* Dorong ke posisi terbawah card */
-}
-
-/* --- ADAPTASI KUSTOM UNTUK LAYOUT TOMBOL FOOTER PROJECT --- */
-.project-divider {
-  border: 0;
-  border-top: 1px solid var(--line);
-  margin: 1.5rem 0 1rem 0;
-}
-.project-footer-links {
-  display: flex;
-  justify-content: flex-start; /* Ubah ke kiri karena tombol kanan sudah dihapus */
-  align-items: center;
-}
-.project-btn-link {
-  font-size: 0.92rem;
-  font-weight: 700;
-  color: var(--pink) !important;
-  transition: opacity 0.2s;
-}
-.project-btn-link:hover {
-  opacity: 0.75;
-}
-/* ------------------------------------------------------------- */
 
 .project-type {
   color: #67e8f9 !important;
@@ -558,13 +616,98 @@ h3 {
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
 }
+
+/* Bulatan Gradasi Angka Nomor Urut Proyek */
+.project-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0.8rem 0 1.8rem;
+}
+
+.project-number-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue), var(--pink));
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+}
+
+.project-title-text h3 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.5rem;
+  letter-spacing: -0.04em;
+}
+
+.project-title-text .project-institution {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* Pembungkus Kotak A-D (Grid) & E (Full-width) */
+.project-sections-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.project-segment-box {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.4rem;
+  border-radius: 20px;
+}
+
+.project-segment-box.full-width {
+  grid-column: span 2;
+  background: rgba(56, 189, 248, 0.04);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+}
+
+.project-divider {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 1.5rem 0 1rem 0;
+}
+
+.project-footer-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.project-btn-link {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--pink) !important;
+  transition: opacity 0.2s;
+}
+
+.project-btn-link:hover {
+  opacity: 0.75;
+}
+
+/* ==========================================================================
+   6. WORK EXPERIENCE & SEPARATED EDUCATION TIMELINES
+   ========================================================================== */
 .timeline-item {
   display: grid;
   grid-template-columns: 24px 1fr;
   gap: 1rem;
   margin-bottom: 1rem;
 }
+
 .dot {
   width: 16px;
   height: 16px;
@@ -573,17 +716,50 @@ h3 {
   background: linear-gradient(135deg, var(--blue), var(--pink));
   box-shadow: 0 0 0 8px rgba(56, 189, 248, 0.12);
 }
+
 .timeline-card {
   padding: 1.35rem;
 }
+
 .date {
   color: #67e8f9 !important;
   font-weight: 800;
 }
+
 .company {
   font-weight: 800;
   color: #fff !important;
 }
+
+/* Grid Layout Mandiri Seksi Pendidikan */
+.education-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 2.2rem;
+}
+
+.education-card-item {
+  padding: 1.8rem;
+}
+
+.edu-date-badge {
+  color: var(--pink) !important;
+  font-weight: 800;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+.edu-institution-name {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ==========================================================================
+   7. CONTACT BOX, FOOTER & KEYFRAME ANIMATIONS
+   ========================================================================== */
 .contact-box {
   text-align: center;
   padding: clamp(2rem, 6vw, 4rem);
@@ -606,41 +782,39 @@ h3 {
       rgba(255, 255, 255, 0.06)
     );
 }
+
 .contact-links {
   justify-content: center;
 }
+
 footer {
   text-align: center;
   padding: 2rem 1rem;
   color: var(--muted);
   border-top: 1px solid var(--line);
 }
+
+/* Scroll Animation JS Bindings */
 .reveal {
   opacity: 0;
   transform: translateY(26px);
   transition: 0.75s ease;
 }
+
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
 @keyframes grow {
   from {
     height: 0;
   }
 }
 
-/* Penyesuaian Custom Kolom Experience */
-.experience-left-column,
-.experience-right-column {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.experience-left-column .section-heading {
-  margin-bottom: 0.5rem;
-}
-
+/* ==========================================================================
+   8. MEDIA QUERIES (RESPONSIVE VIEWPORT CODES)
+   ========================================================================== */
 @media (max-width: 900px) {
   .menu-btn {
     display: block;
@@ -665,14 +839,22 @@ footer {
   .hero-grid,
   .split,
   .skills-grid,
-  .projects-grid,
-  .about-cards {
+  .about-cards,
+  .project-sections-wrapper,
+  .education-grid-layout {
     grid-template-columns: 1fr;
+  }
+  .project-segment-box.full-width {
+    grid-column: span 1;
   }
   .profile-card {
     transform: none;
   }
   .section {
     padding: 72px 0;
+  }
+  .nav-cv-link {
+    margin-top: 0.5rem;
+    text-align: center;
   }
 }
