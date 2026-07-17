@@ -8,7 +8,8 @@
       name="description"
       content="Ahmad Suhaebi data analyst portfolio showcasing Python, SQL, Tableau, spreadsheet, and business insight projects."
     />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <!-- FIX FAVICON: Memanggil file PNG hasil konversi -->
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -25,7 +26,14 @@
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
           <a href="#contact" class="nav-cta">Contact</a>
+          <a
+            href="https://drive.google.com/file/d/1ztusa8YAOy3DXk-SE_nC1_HsuYtTy8Be/view?usp=sharing"
+            class="nav-cv-link"
+            target="_blank"
+            >Download CV 📥</a
+          >
         </div>
       </nav>
     </header>
@@ -48,6 +56,12 @@
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#projects">See My Work</a>
+              <a
+                class="btn btn-cv-hero"
+                href="https://drive.google.com/file/d/1ztusa8YAOy3DXk-SE_nC1_HsuYtTy8Be/view?usp=sharing"
+                target="_blank"
+                >Download CV 📥</a
+              >
               <a class="btn btn-ghost" href="mailto:suhaebiahmad@gmail.com"
                 >Email Me</a
               >
@@ -97,14 +111,24 @@
           </div>
           <div class="about-content reveal">
             <p>
-              I have experience analyzing monthly machine spare part usage,
-              downtime trends, cost estimates, and procurement needs to support
-              cost control and operational performance.
+              I am a data-oriented individual with over 10 years of experience
+              in engineering administration, operational reporting, procurement,
+              and data analysis in the manufacturing industry, particularly in
+              aquafeed production. As a Staff Admin Teknik at PT. Suri Tani
+              Pemuka (Japfa Group), I monitored monthly spare part expenditures
+              of approximately IDR 800 million, supported procurement planning,
+              and tracked production performance to maintain operational
+              efficiency.
             </p>
             <p>
-              I also completed several data analytics projects involving sales
-              performance, customer behavior, healthcare admissions, and
-              business KPI analysis.
+              To strengthen my analytical capabilities, I completed a Full Stack
+              Data Analytics Bootcamp at RevoU, where I applied SQL, Python,
+              Tableau, and Power BI to clean data, perform exploratory data
+              analysis, build interactive dashboards, and generate business
+              insights. I am confident in combining my manufacturing operations
+              experience with data analytics skills to transform data into
+              actionable insights that support business performance and
+              decision-making.
             </p>
             <div class="about-cards">
               <div>
@@ -137,47 +161,49 @@
               <div class="icon blue">Py</div>
               <h3>Python</h3>
               <p>
-                Data cleaning, EDA, visualization, segmentation, and summary
-                analysis.
+                Data cleaning, EDA, visualization, RFM analysis, K-Means
+                clustering, and summary analysis.
               </p>
             </article>
             <article class="skill-card reveal">
               <div class="icon purple">SQL</div>
               <h3>SQL / BigQuery</h3>
               <p>
-                Joins, aggregation, KPI analysis, and business data exploration.
+                Joins, table aggregation, KPI analysis, and deep business data
+                exploration.
               </p>
             </article>
             <article class="skill-card reveal">
               <div class="icon green">BI</div>
               <h3>Tableau & Power BI</h3>
               <p>
-                Interactive dashboards development, calculated fields, data
-                visualization, and data storytelling.
+                Interactive dashboards development, customized metrics, data
+                visualization, and visual data storytelling.
               </p>
             </article>
             <article class="skill-card reveal">
               <div class="icon orange">Xl</div>
               <h3>Spreadsheets</h3>
               <p>
-                Pivot tables, charts, cleaning, A/B testing, and final
-                recommendations.
+                Advanced pivot tables, logical charting, formulas cleaning, A/B
+                testing, and final business summaries.
               </p>
             </article>
             <article class="skill-card reveal">
               <div class="icon pink">PPT</div>
               <h3>Presentation</h3>
               <p>
-                Executive summaries, insight narratives, and stakeholder-ready
-                slides.
+                Executive summaries structuring, pitch narrative design, and
+                stakeholder-ready insight presentations.
               </p>
             </article>
             <article class="skill-card reveal">
               <div class="icon dark">Ops</div>
               <h3>Operations Data</h3>
               <p>
-                Spare part usage, inventory monitoring, downtime, procurement,
-                and cost estimates.
+                Spare part usage modeling, inventory control monitoring, engine
+                downtime tracking, procurement logistics, and project cost
+                estimation.
               </p>
             </article>
           </div>
@@ -190,49 +216,90 @@
             <p class="pill">Projects</p>
             <h2>Selected work from my data analytics learning journey.</h2>
           </div>
-          <div class="projects-grid">
-            <!-- 1. PROJECT KIRI: OLIST E-COMMERCE -->
-            <article class="project-card big reveal">
-              <div class="project-image-cover">
-                <img
-                  src="cover-olist.png"
-                  alt="Olist E-Commerce Cover"
-                  style="object-position: center 40%"
-                />
-              </div>
-              <div class="project-body">
-                <div class="project-main-content">
-                  <p class="project-type">
-                    Python • SQL • Tableau • Business Analysis
-                  </p>
-                  <h3>Olist E-Commerce Business Analysis</h3>
-                  <p>
-                    Analysed 100,000+ e-commerce transactions to identify key
-                    revenue drivers and develop actionable business growth
-                    recommendations.
-                  </p>
-                  <ul>
-                    <li>
-                      Analysed 100,000+ e-commerce transactions and identified
-                      key revenue drivers that were used to develop business
-                      growth recommendations.
-                    </li>
-                    <li>
-                      Built an interactive Tableau dashboard integrating 10+
-                      business KPIs, enabling monitoring of revenue trends,
-                      order performance, and product category contribution.
-                    </li>
-                    <li>
-                      Performed SQL and Python-based exploratory data analysis
-                      to uncover purchasing behaviour patterns and revenue
-                      fluctuation factors.
-                    </li>
-                    <li>
-                      Delivered data-driven recommendations focused on
-                      increasing Average Order Value (AOV) and improving
-                      high-performing product category strategies.
-                    </li>
-                  </ul>
+          <div class="projects-grid-full">
+            <!-- PROJECT 1: OLIST E-COMMERCE -->
+            <article class="project-detailed-card reveal">
+              <div class="project-body-detailed">
+                <!-- KOREKSI: Teks diubah murni menjadi list nama tools -->
+                <p class="project-type">SQL • Python • Tableau</p>
+
+                <div class="project-title-wrapper">
+                  <span class="project-number-circle">1</span>
+                  <div class="project-title-text">
+                    <h3>Olist E-Commerce Business Analysis</h3>
+                    <p class="project-institution">RevoU — June 2026</p>
+                  </div>
+                </div>
+
+                <div class="project-sections-wrapper">
+                  <div class="project-segment-box">
+                    <h4>a. Background Project</h4>
+                    <p>
+                      Olist operates as a B2C marketplace connecting sellers and
+                      customers in Brazil. The company experienced continuous
+                      monthly revenue fluctuations, creating operational
+                      blindness for the category management, finance, and
+                      marketplace operations teams regarding the core drivers of
+                      these movements.
+                    </p>
+                  </div>
+
+                  <div class="project-segment-box">
+                    <h4>b. Objective</h4>
+                    <p>
+                      To analyze over 100,000 marketplace transaction records
+                      from January 2017 to August 2018 using a data-driven
+                      approach to discover the true variables behind revenue
+                      drops or gains, and design a recurring monitoring
+                      dashboard to support targeted business adjustments.
+                    </p>
+                  </div>
+
+                  <div class="project-segment-box">
+                    <h4>c. Scope / Method</h4>
+                    <p>
+                      The scope was strictly narrowed to completed delivered
+                      orders. The methodology followed problem understanding,
+                      systematic data cleaning (handling categorical null
+                      entries, verifying types), Exploratory Data Analysis (EDA)
+                      to trace correlations between volume and Average Order
+                      Value (AOV), and dashboard visualization deployment.
+                    </p>
+                  </div>
+
+                  <div class="project-segment-box">
+                    <h4>d. Tools Used</h4>
+                    <p>
+                      SQL (Google BigQuery) for relational data aggregation,
+                      Python (Google Colab) for structured data cleaning, and
+                      Tableau for full stack dashboard design.
+                    </p>
+                  </div>
+
+                  <div class="project-segment-box full-width">
+                    <h4>e. Result / Recommendations</h4>
+                    <ul>
+                      <li>
+                        Delivered order volume is the strongest visible driver
+                        of overall marketplace revenue (peaking in Nov 2017 with
+                        7,289 orders and Rp987.8K revenue). AOV serves as a
+                        crucial balancing exception when order counts stagnate.
+                      </li>
+                      <li>
+                        The Top 5 categories drive an intense 39.89%
+                        concentration of total marketplace revenue.
+                      </li>
+                      <li>
+                        Action Plan: Recommended that Olist's category
+                        management teams safeguard product availability and
+                        visibility for the Top 5 contributors. Suggested
+                        deploying bundle recommendations and high-value category
+                        highlights during volume plateaus (such as April–May
+                        2018) to elevate basket value and protect total
+                        revenues.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
 
                 <div class="project-footer-wrapper">
@@ -250,48 +317,92 @@
               </div>
             </article>
 
-            <!-- 2. PROJECT KANAN: CUSTOMER SEGMENTATION -->
-            <article class="project-card big reveal">
-              <div class="project-image-cover">
-                <img
-                  src="cover-segmentation.png"
-                  alt="Customer Segmentation Cover"
-                  style="object-position: center"
-                />
-              </div>
-              <div class="project-body">
-                <div class="project-main-content">
-                  <p class="project-type">
-                    Python • RFM Analysis • K-Means Clustering
-                  </p>
-                  <h3>
-                    Customer Segmentation Analysis using K-Means Clustering
-                  </h3>
-                  <p>
-                    Processed credit card and customer datasets using machine
-                    learning to uncover distinct risk profiles and spending
-                    patterns.
-                  </p>
-                  <ul>
-                    <li>
-                      Processed and analysed 5,531 credit card records and 2,000
-                      customer records using Python for customer behavior
-                      analysis.
-                    </li>
-                    <li>
-                      Evaluated more than IDR 457 billion in transaction value
-                      to identify profitability, risk, and spending patterns.
-                    </li>
-                    <li>
-                      Applied RFM Analysis and K-Means Clustering to segment
-                      1,195 customers into four actionable customer groups.
-                    </li>
-                    <li>
-                      Generated customer segmentation insights and business
-                      recommendations to support targeted marketing and customer
-                      retention strategies.
-                    </li>
-                  </ul>
+            <!-- PROJECT 2: CUSTOMER SEGMENTATION -->
+            <article class="project-detailed-card reveal">
+              <div class="project-body-detailed">
+                <!-- KOREKSI: Teks diubah murni menjadi list nama tools -->
+                <p class="project-type">Python • Pandas • Scikit-learn</p>
+
+                <div class="project-title-wrapper">
+                  <span class="project-number-circle">2</span>
+                  <div class="project-title-text">
+                    <h3>
+                      Customer Segmentation Analysis using K-Means Clustering
+                    </h3>
+                    <p class="project-institution">RevoU — May 2026</p>
+                  </div>
+                </div>
+
+                <div class="project-sections-wrapper">
+                  <div class="project-segment-box">
+                    <h4>a. Background Project</h4>
+                    <p>
+                      RevoBank needed to improve credit card usage frequency
+                      among its existing customer portfolio. The product
+                      management and marketing teams lacked empirical client
+                      profiles, leading to generic campaigns that failed to
+                      balance financial risk parameters like Debt-to-Income
+                      (DTI) with active spending habits.
+                    </p>
+                  </div>
+
+                  <div class="project-segment-box">
+                    <h4>b. Objective</h4>
+                    <p>
+                      Process and parse 5,531 raw active credit card accounts
+                      and 2,000 distinct customer profiles to isolate precise
+                      behavior groups via data-driven clustering, allowing
+                      RevoBank to deploy highly personalized card usage
+                      campaigns and maximize MDR profits safely.
+                    </p>
+                  </div>
+
+                  <div class="project-segment-box">
+                    <h4>c. Scope / Method</h4>
+                    <p>
+                      Evaluated cumulative financial behaviors up to the cutoff
+                      date of May 31, 2025. Applied rigorous cleaning flows
+                      (data type conversions, outlier handling), feature
+                      engineering (generating age groups, retirement metrics,
+                      and DTI ratios), executed RFM matrix preparation, and
+                      deployed a machine learning K-Means Clustering algorithm
+                      (optimizing k=4 groups via the Elbow Method).
+                    </p>
+                  </div>
+
+                  <div class="project-segment-box">
+                    <h4>d. Tools Used</h4>
+                    <p>
+                      Python inside Google Colab utilizing libraries such as
+                      Pandas, NumPy, Scikit-learn for mathematical modeling, and
+                      Matplotlib/Seaborn for exploratory chart building.
+                    </p>
+                  </div>
+
+                  <div class="project-segment-box full-width">
+                    <h4>e. Result / Recommendations</h4>
+                    <ul>
+                      <li>
+                        The data disproved standard assumptions by revealing
+                        that retired users maintain a much lower, safer average
+                        DTI (0.067) compared to non-retired users (0.296).
+                      </li>
+                      <li>
+                        Clustered 1,195 active users into 4 distinct groups:
+                        Premium Active Spenders (66 users), Active Growth
+                        Customers (291 users), Risky Moderate Spenders (293
+                        users, highest DTI), and Low Value Mass Customers (545
+                        users).
+                      </li>
+                      <li>
+                        Action Plan: Prioritize high-reward loyalty plans for
+                        Premium Active Spenders and spend-based gamification
+                        cards for Active Growth Customers. Constrain aggressive
+                        limit upgrades for Risky Moderate Spenders due to their
+                        volatile 0.27 debt ratio footprint.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
 
                 <div class="project-footer-wrapper">
@@ -326,6 +437,59 @@
             <div class="timeline-item">
               <span class="dot"></span>
               <div class="timeline-card">
+                <p class="date">Aug 2025 – Present</p>
+                <h3>Owner</h3>
+                <p class="company">
+                  Dina Teknik - Industrial & Technical Supplies
+                </p>
+                <ul>
+                  <li>
+                    Managed daily business operations, including procurement,
+                    inventory management, supplier coordination, sales, and
+                    business administration, ensuring timely product
+                    availability for industrial and manufacturing customers.
+                  </li>
+                  <li>
+                    Monitored inventory movement and purchasing trends to
+                    maintain 95% product availability, support inventory
+                    planning, and improve purchasing decisions.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="margin-top: 1.5rem">
+              <span class="dot"></span>
+              <div class="timeline-card">
+                <p class="date">Oct 2025 – Nov 2025</p>
+                <h3>Lead Generation Virtual Assistant Intern</h3>
+                <p class="company">
+                  Singapore Global Business (Client: Emcee Sharlyn Lim)
+                </p>
+                <ul>
+                  <li>
+                    Supported lead generation and business development
+                    initiatives for Emcee Sharlyn Lim, by researching and
+                    identifying 5 qualified corporate prospects, expanding
+                    potential client opportunities.
+                  </li>
+                  <li>
+                    Conducted market research across 5 companies to identify
+                    corporate prospects aligned with the target market,
+                    increasing 30% targeted outreach campaigns.
+                  </li>
+                  <li>
+                    Developed lead generation strategies, personalised outreach
+                    emails, and engagement materials to support client
+                    acquisition and business development.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="margin-top: 1.5rem">
+              <span class="dot"></span>
+              <div class="timeline-card">
                 <p class="date">May 2015 – Aug 2025</p>
                 <h3>Staff Admin Teknik</h3>
                 <p class="company">PT. Suri Tani Pemuka (Japfa Group)</p>
@@ -338,7 +502,8 @@
                   <li>
                     Prepared cost estimates for 2-3 annual machine installation
                     and engineering projects involving five major production
-                    machines and supporting equipment.
+                    machines and supporting equipment, ensuring 95% on time
+                    project completion.
                   </li>
                   <li>
                     Tracked downtime performance across five major production
@@ -353,52 +518,79 @@
                 </ul>
               </div>
             </div>
-          </div>
 
-          <div
-            class="experience-bottom-row"
-            style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem"
-          >
-            <div class="timeline reveal">
-              <div class="timeline-item">
-                <span class="dot"></span>
-                <div class="timeline-card">
-                  <p class="date">January 2026</p>
-                  <h3>Bootcamp Data Analysis</h3>
-                  <p class="company">MySkill</p>
-                  <ul>
-                    <li>
-                      Strengthened data analysis fundamentals through structured
-                      and project-based learning.
-                    </li>
-                    <li>
-                      Applied data cleaning, analysis, visualization, and
-                      reporting concepts to practical cases.
-                    </li>
-                  </ul>
-                </div>
+            <div class="timeline-item" style="margin-top: 1.5rem">
+              <span class="dot"></span>
+              <div class="timeline-card">
+                <p class="date">Aug 2013 – Apr 2015</p>
+                <h3>Self-Employed</h3>
+                <p class="company">Mobile Phone Credit Business</p>
+                <ul>
+                  <li>
+                    Managed a small mobile phone credit business, handling daily
+                    sales transactions, inventory management, and customer
+                    service while improving English communication skills through
+                    an offline English course at Nugraha College.
+                  </li>
+                </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="timeline reveal">
-              <div class="timeline-item">
-                <span class="dot"></span>
-                <div class="timeline-card">
-                  <p class="date">June 2026</p>
-                  <h3>Full Stack Data Analytics</h3>
-                  <p class="company">RevoU</p>
-                  <ul>
-                    <li>
-                      Completed intensive data analytics training covering SQL,
-                      Python, Tableau, and Advanced Analytics.
-                    </li>
-                    <li>
-                      Developed hands-on capstone projects in business revenue
-                      analysis and machine-learning customer segmentation.
-                    </li>
-                  </ul>
-                </div>
-              </div>
+      <section id="education" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="pill">Education</p>
+            <h2>Education & Professional Bootcamps.</h2>
+          </div>
+
+          <div class="education-grid-layout reveal">
+            <div class="education-card-item">
+              <p class="edu-date-badge">Feb 2026 – June 2026</p>
+              <h3>Full Stack Data Analytics</h3>
+              <p class="edu-institution-name">RevoU</p>
+              <p class="edu-details-text">
+                Completed an intensive data analytics bootcamp covering
+                full-stack core proficiencies including SQL, Python, Tableau,
+                Power BI, and business insights presentation frameworks.
+              </p>
+            </div>
+
+            <div class="education-card-item">
+              <p class="edu-date-badge">January 2026</p>
+              <h3>Full Stack Intensive Bootcamp</h3>
+              <p class="edu-institution-name">MySkill</p>
+              <p class="edu-details-text">
+                Strengthened analytics fundamentals and frameworks through
+                comprehensive practice and hands-on project portfolio
+                applications.
+              </p>
+            </div>
+
+            <div class="education-card-item">
+              <p class="edu-date-badge">Sep 2025 – Nov 2025</p>
+              <h3>Virtual Assistant & Lead Generation Program</h3>
+              <p class="edu-institution-name">
+                Singapore Global Business (SGB)
+              </p>
+              <p class="edu-details-text">
+                Completed a professional program covering modern market research
+                frameworks, data optimization pipelines, B2B lead generation,
+                and CRM outbound operations.
+              </p>
+            </div>
+
+            <div class="education-card-item">
+              <p class="edu-date-badge">July 2010 – Sep 2013</p>
+              <h3>Associate's Degree, Informatics Management</h3>
+              <p class="edu-institution-name">Politeknik Perdana Mandiri</p>
+              <p class="edu-details-text">
+                Graduated with a 3.48 GPA. Acquired solid foundations in modern
+                software development architectures, relational database
+                management systems, and systems business analysis.
+              </p>
             </div>
           </div>
         </div>
